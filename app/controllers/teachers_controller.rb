@@ -1,0 +1,12 @@
+class TeachersController < BaseController
+  def index
+    render json: Teacher.all
+  end
+
+  def destroy
+    @teacher = Teacher.find(params[:id])
+    @teacher.courses.destroy_all
+    @teacher.destroy
+    render json: @teacher
+  end
+end
