@@ -13,9 +13,9 @@ module Api
             courses << course_name
           end
           info = {"teacher" => teacher_name, "courses" => courses}
-          infors << info
+          infos << info
         end
-        render json: infors
+        render json: infos
       end
 
       def destroy
