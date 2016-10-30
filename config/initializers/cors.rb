@@ -14,3 +14,5 @@
 #       methods: [:get, :post, :put, :patch, :delete, :options, :head]
 #   end
 # end
+
+ActiveModel::Serializer.config.adapter = :json_api
