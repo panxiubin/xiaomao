@@ -7,6 +7,6 @@ class TeachersController < ApplicationController
     @teacher = Teacher.find(params[:id])
     @teacher.courses.destroy_all
     @teacher.destroy
-    render json.message "has been deleted!"
+    render json: { code: 'success', msg: '成功删除' }
   end
 end
